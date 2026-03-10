@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>曾詩淇 - 亞大學生</title>
+  <style>
+    :root {
+      --bg: #f7f7f7;
+      --card: #ffffff;
+      --text: #1b1b1b;
+      --muted: #555;
+      --accent: #2b6cb0;
+    }
+    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, "PingFang TC", "Noto Sans CJK TC", Arial; }
+    .resume {
+      max-width: 900px; margin: 40px auto; padding: 20px;
+      background: var(--card); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.05);
+    }
+    header { border-bottom: 1px solid #eee; padding-bottom: 12px; margin-bottom: 12px; }
+    header h1 { margin: 0; font-size: 2rem; }
+    header .subtitle { color: var(--muted); }
+    .topbar { display: flex; justify-content: flex-end; gap: 8px; margin: 6px 0 12px; }
+    section { padding: 12px 0; border-bottom: 1px solid #eee; }
+    section:last-child { border-bottom: none; }
+    h2 { font-size: 1.15rem; margin: 0 0 8px; color: #333; }
+    ul { padding-left: 20px; margin: 6px 0; }
+    .row { display: flex; gap: 20px; flex-wrap: wrap; }
+    .col { flex: 1 1 260px; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; background: #eef; color: #265; font-size: 12px; margin-right: 6px; }
+    a { color: var(--accent); text-decoration: none; }
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.6rem; }
+    }
+    /* 簡單的暗黑模式支援 */
+    body.dark { --bg: #0e0f14; --card: #141a23; --text: #eaeef5; --muted: #a5b0c0; --accent: #85a4ff; }
+  </style>
+</head>
+<body>
+  <div class="resume" role="main" aria-label="履歷">
+    <div class="topbar">
+      <button onclick="toggleTheme()">切換主題</button>
+      <button onclick="window.print()">列印履歷</button>
+    </div>
+
+    <header>
+      <h1>姓名：[曾詩淇]</h1>
+      <div class="subtitle">就業目標：實習/前端開發相關職位</div>
+      <div>學號: AU114054024</div>
+    </header>
+
+    <section aria-labelledby="personal-info-heading" id="personal-info">
+      <h2 id="personal-info-heading">個人資訊</h2>
+      <p>電子郵件: [your.email@example.com]</p>
+      <p>手機: [電話號碼]</p>
+      <p>地址: [城市, 國家]</p>
+      <p>LinkedIn: <a href="#" aria-label="LinkedIn">linkedin.com/in/yourprofile</a> | GitHub: <a href="#" aria-label="GitHub">github.com/yourprofile</a></p>
+    </section>
+
+    <section aria-labelledby="education-heading" id="education">
+      <h2 id="education-heading">教育背景</h2>
+      <div class="row">
+        <div class="col">
+          <strong>亞洲大學</strong> — 學士在讀，計算機科學系
+          <div>起迄：2024 - 目前</div>
+          <div>相關課程：資料結構、演算法、網頁設計、軟體工程</div>
+        </div>
+        <div class="col">
+          <strong>GPA</strong>：3.8/4.0
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="experience-heading" id="experience">
+      <h2 id="experience-heading">工作與專案經驗</h2>
+
+      <div>
+        <strong>實習生 | [公司名稱]</strong> <span class="badge">2025 夏季</span>
+        <ul>
+          <li>協助前端開發，使用 HTML/CSS/JavaScript</li>
+          <li>優化 UI 元件，提升使用者體驗</li>
+        </ul>
+      </div>
+
+      <div>
+        <strong>專案：任務清單</strong> <span class="badge">個人專案</span>
+        <ul>
+          <li>使用 Vanilla JS/HTML/CSS 建立任務清單，含新增、修改、刪除</li>
+          <li>將資料存在 localStorage，實作簡易持久化</li>
+        </ul>
+      </div>
+    </section>
+
+    <section aria-labelledby="skills-heading" id="skills">
+      <h2 id="skills-heading">技能專長</h2>
+      <ul class="row" style="list-style:none; padding:0;">
+        <li class="badge">HTML</li>
+        <li class="badge">CSS</li>
+        <li class="badge">JavaScript</li>
+        <li class="badge">Git</li>
+        <li class="badge">問題解決</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="languages-heading" id="languages">
+      <h2 id="languages-heading">語言能力</h2>
+      <ul>
+        <li>中文（母語）</li>
+        <li>英文（中高級）</li>
+      </ul>
+    </section>
+
+    <section aria-labelledby="certs-heading" id="certs">
+      <h2 id="certs-heading">證照與證明</h2>
+      <ul>
+        <li>待補充/如有請填寫</li>
+      </ul>
+    </section>
+
+    <footer style="text-align:center; padding:12px; color:#777;">
+      著作權 © 2026
+    </footer>
+  </div>
+
+  <script>
+    // 簡單的主題切換
+    function toggleTheme() {
+      document.body.classList.toggle('dark');
+    }
+  </script>
+</body>
+</html>
