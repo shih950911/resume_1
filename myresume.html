@@ -1,132 +1,261 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>曾詩淇 - 亞大學生</title>
-  <style>
-    :root {
-      --bg: #f7f7f7;
-      --card: #ffffff;
-      --text: #1b1b1b;
-      --muted: #555;
-      --accent: #2b6cb0;
-    }
-    body { margin: 0; background: var(--bg); color: var(--text); font-family: system-ui, -apple-system, "Segoe UI", Roboto, "PingFang TC", "Noto Sans CJK TC", Arial; }
-    .resume {
-      max-width: 900px; margin: 40px auto; padding: 20px;
-      background: var(--card); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.05);
-    }
-    header { border-bottom: 1px solid #eee; padding-bottom: 12px; margin-bottom: 12px; }
-    header h1 { margin: 0; font-size: 2rem; }
-    header .subtitle { color: var(--muted); }
-    .topbar { display: flex; justify-content: flex-end; gap: 8px; margin: 6px 0 12px; }
-    section { padding: 12px 0; border-bottom: 1px solid #eee; }
-    section:last-child { border-bottom: none; }
-    h2 { font-size: 1.15rem; margin: 0 0 8px; color: #333; }
-    ul { padding-left: 20px; margin: 6px 0; }
-    .row { display: flex; gap: 20px; flex-wrap: wrap; }
-    .col { flex: 1 1 260px; }
-    .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; background: #eef; color: #265; font-size: 12px; margin-right: 6px; }
-    a { color: var(--accent); text-decoration: none; }
-    @media (max-width: 600px) {
-      header h1 { font-size: 1.6rem; }
-    }
-    /* 簡單的暗黑模式支援 */
-    body.dark { --bg: #0e0f14; --card: #141a23; --text: #eaeef5; --muted: #a5b0c0; --accent: #85a4ff; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>曾詩淇 | 個人履歷</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: "Segoe UI","Noto Sans TC",sans-serif;
+    background:#f2f4f8;
+}
+
+/* 履歷主卡片 */
+
+.container{
+    max-width:900px;
+    margin:40px auto;
+    background:white;
+    border-radius:12px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    overflow:hidden;
+}
+
+/* 頭部 */
+
+.header{
+    display:flex;
+    align-items:center;
+    gap:30px;
+    padding:30px;
+    background:linear-gradient(135deg,#3a7bd5,#00d2ff);
+    color:white;
+}
+
+.header img{
+    width:130px;
+    height:130px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid white;
+}
+
+.header h1{
+    margin:0;
+    font-size:30px;
+}
+
+.header p{
+    margin:6px 0;
+}
+
+/* 內容 */
+
+.section{
+    padding:25px 30px;
+    border-bottom:1px solid #eee;
+}
+
+.section:last-child{
+    border:none;
+}
+
+.section h2{
+    margin-bottom:10px;
+    color:#333;
+}
+
+/* 技能 */
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+}
+
+.skill{
+    background:#eef2ff;
+    color:#3b5bdb;
+    padding:6px 12px;
+    border-radius:20px;
+    font-size:14px;
+}
+
+/* 專案 */
+
+.project{
+    margin-bottom:10px;
+}
+
+.project strong{
+    color:#333;
+}
+
+/* footer */
+
+.footer{
+    text-align:center;
+    padding:15px;
+    font-size:14px;
+    color:#777;
+}
+
+/* 手機版 */
+
+@media(max-width:600px){
+
+.header{
+    flex-direction:column;
+    text-align:center;
+}
+
+}
+
+</style>
 </head>
+
 <body>
-  <div class="resume" role="main" aria-label="履歷">
-    <div class="topbar">
-      <button onclick="toggleTheme()">切換主題</button>
-      <button onclick="window.print()">列印履歷</button>
-    </div>
 
-    <header>
-      <h1>姓名：[曾詩淇]</h1>
-      <div class="subtitle">就業目標：實習/前端開發相關職位</div>
-      <div>學號: AU114054024</div>
-    </header>
+<div class="container">
 
-    <section aria-labelledby="personal-info-heading" id="personal-info">
-      <h2 id="personal-info-heading">個人資訊</h2>
-      <p>電子郵件: [your.email@example.com]</p>
-      <p>手機: [電話號碼]</p>
-      <p>地址: [城市, 國家]</p>
-      <p>LinkedIn: <a href="#" aria-label="LinkedIn">linkedin.com/in/yourprofile</a> | GitHub: <a href="#" aria-label="GitHub">github.com/yourprofile</a></p>
-    </section>
+<!-- 個人資料 -->
 
-    <section aria-labelledby="education-heading" id="education">
-      <h2 id="education-heading">教育背景</h2>
-      <div class="row">
-        <div class="col">
-          <strong>亞洲大學</strong> — 學士在讀，計算機科學系
-          <div>起迄：2024 - 目前</div>
-          <div>相關課程：資料結構、演算法、網頁設計、軟體工程</div>
-        </div>
-        <div class="col">
-          <strong>GPA</strong>：3.8/4.0
-        </div>
-      </div>
-    </section>
+<div class="header">
 
-    <section aria-labelledby="experience-heading" id="experience">
-      <h2 id="experience-heading">工作與專案經驗</h2>
+<img src="img/photo.jpg" alt="曾詩淇">
 
-      <div>
-        <strong>實習生 | [公司名稱]</strong> <span class="badge">2025 夏季</span>
-        <ul>
-          <li>協助前端開發，使用 HTML/CSS/JavaScript</li>
-          <li>優化 UI 元件，提升使用者體驗</li>
-        </ul>
-      </div>
+<div>
 
-      <div>
-        <strong>專案：任務清單</strong> <span class="badge">個人專案</span>
-        <ul>
-          <li>使用 Vanilla JS/HTML/CSS 建立任務清單，含新增、修改、刪除</li>
-          <li>將資料存在 localStorage，實作簡易持久化</li>
-        </ul>
-      </div>
-    </section>
+<h1>曾詩淇</h1>
 
-    <section aria-labelledby="skills-heading" id="skills">
-      <h2 id="skills-heading">技能專長</h2>
-      <ul class="row" style="list-style:none; padding:0;">
-        <li class="badge">HTML</li>
-        <li class="badge">CSS</li>
-        <li class="badge">JavaScript</li>
-        <li class="badge">Git</li>
-        <li class="badge">問題解決</li>
-      </ul>
-    </section>
+<p>亞洲大學｜資訊工程相關領域學生</p>
 
-    <section aria-labelledby="languages-heading" id="languages">
-      <h2 id="languages-heading">語言能力</h2>
-      <ul>
-        <li>中文（母語）</li>
-        <li>英文（中高級）</li>
-      </ul>
-    </section>
+<p>學號：AU114054024</p>
 
-    <section aria-labelledby="certs-heading" id="certs">
-      <h2 id="certs-heading">證照與證明</h2>
-      <ul>
-        <li>待補充/如有請填寫</li>
-      </ul>
-    </section>
+<p>目標：前端工程師 / Web 開發實習</p>
 
-    <footer style="text-align:center; padding:12px; color:#777;">
-      著作權 © 2026
-    </footer>
-  </div>
+</div>
 
-  <script>
-    // 簡單的主題切換
-    function toggleTheme() {
-      document.body.classList.toggle('dark');
-    }
-  </script>
+</div>
+
+<!-- 個人資訊 -->
+
+<div class="section">
+
+<h2>個人資訊</h2>
+
+<p>Email：your.email@example.com</p>
+
+<p>電話：0912-345-678</p>
+
+<p>地址：台中市，台灣</p>
+
+<p>
+GitHub：
+<a href="#">github.com/yourprofile</a>
+</p>
+
+</div>
+
+<!-- 教育背景 -->
+
+<div class="section">
+
+<h2>教育背景</h2>
+
+<p>
+<strong>亞洲大學</strong> — 資訊相關科系<br>
+2024 - 現在
+</p>
+
+<p>GPA：3.8 / 4.0</p>
+
+<p>相關課程：</p>
+
+<ul>
+<li>資料結構</li>
+<li>演算法</li>
+<li>網頁設計</li>
+<li>軟體工程</li>
+</ul>
+
+</div>
+
+<!-- 專案經驗 -->
+
+<div class="section">
+
+<h2>專案經驗</h2>
+
+<div class="project">
+
+<strong>任務清單 Web App</strong>
+
+<ul>
+<li>使用 HTML / CSS / JavaScript 製作</li>
+<li>支援新增、刪除、修改任務</li>
+<li>使用 localStorage 儲存資料</li>
+</ul>
+
+</div>
+
+<div class="project">
+
+<strong>個人履歷網站</strong>
+
+<ul>
+<li>使用 HTML + CSS 製作響應式履歷頁面</li>
+<li>設計現代化 UI 版面</li>
+</ul>
+
+</div>
+
+</div>
+
+<!-- 技能 -->
+
+<div class="section">
+
+<h2>技能</h2>
+
+<div class="skills">
+
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Git</div>
+<div class="skill">Web Design</div>
+
+</div>
+
+</div>
+
+<!-- 語言 -->
+
+<div class="section">
+
+<h2>語言能力</h2>
+
+<ul>
+
+<li>中文（母語）</li>
+
+<li>英文（中級）</li>
+
+</ul>
+
+</div>
+
+<div class="footer">
+
+© 2026 曾詩淇 Resume
+
+</div>
+
+</div>
+
 </body>
 </html>
