@@ -3,117 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>曾詩淇 | 個人履歷</title>
+<title>曾詩淇 | 履歷</title>
 
 <style>
-
 body{
     margin:0;
-    font-family: "Segoe UI","Noto Sans TC",sans-serif;
-    background:#f2f4f8;
+    font-family:"Segoe UI","Noto Sans TC",sans-serif;
+    background:#eef1f5;
 }
-
-/* 履歷主卡片 */
 
 .container{
-    max-width:900px;
+    max-width:1000px;
     margin:40px auto;
+    display:grid;
+    grid-template-columns: 300px 1fr;
     background:white;
-    border-radius:12px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    border-radius:16px;
     overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* 頭部 */
-
-.header{
-    display:flex;
-    align-items:center;
-    gap:30px;
-    padding:30px;
-    background:linear-gradient(135deg,#3a7bd5,#00d2ff);
+/* 左側欄 */
+.sidebar{
+    background:linear-gradient(180deg,#1e3c72,#2a5298);
     color:white;
+    padding:30px 20px;
 }
 
-.header img{
-    width:130px;
-    height:130px;
+.sidebar img{
+    width:120px;
+    height:120px;
     border-radius:50%;
-    object-fit:cover;
+    display:block;
+    margin:0 auto 20px;
     border:4px solid white;
 }
 
-.header h1{
-    margin:0;
-    font-size:30px;
+.sidebar h1{
+    text-align:center;
+    margin:10px 0;
 }
 
-.header p{
-    margin:6px 0;
+.sidebar p{
+    text-align:center;
+    font-size:14px;
 }
 
-/* 內容 */
+.sidebar h3{
+    margin-top:25px;
+    border-bottom:1px solid rgba(255,255,255,0.3);
+    padding-bottom:5px;
+}
+
+.sidebar ul{
+    padding-left:18px;
+}
+
+/* 技能標籤 */
+.skill{
+    display:inline-block;
+    background:rgba(255,255,255,0.2);
+    padding:6px 10px;
+    border-radius:20px;
+    margin:4px 4px 0 0;
+    font-size:13px;
+}
+
+/* 右側內容 */
+.main{
+    padding:30px;
+}
 
 .section{
-    padding:25px 30px;
-    border-bottom:1px solid #eee;
-}
-
-.section:last-child{
-    border:none;
+    margin-bottom:25px;
 }
 
 .section h2{
+    border-left:5px solid #2a5298;
+    padding-left:10px;
     margin-bottom:10px;
-    color:#333;
 }
-
-/* 技能 */
-
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    gap:10px;
-}
-
-.skill{
-    background:#eef2ff;
-    color:#3b5bdb;
-    padding:6px 12px;
-    border-radius:20px;
-    font-size:14px;
-}
-
-/* 專案 */
 
 .project{
-    margin-bottom:10px;
+    margin-bottom:15px;
 }
 
-.project strong{
-    color:#333;
+.project ul{
+    margin:5px 0 0 15px;
 }
 
-/* footer */
-
-.footer{
-    text-align:center;
-    padding:15px;
-    font-size:14px;
-    color:#777;
+/* 響應式 */
+@media(max-width:768px){
+    .container{
+        grid-template-columns:1fr;
+    }
 }
-
-/* 手機版 */
-
-@media(max-width:600px){
-
-.header{
-    flex-direction:column;
-    text-align:center;
-}
-
-}
-
 </style>
 </head>
 
@@ -121,137 +105,69 @@ body{
 
 <div class="container">
 
-<!-- 個人資料 -->
+<!-- 左欄 -->
+<div class="sidebar">
 
-<div class="header">
-
-<img src="img/photo.jpg" alt="曾詩淇">
-
-<div>
+<img src="img/photo.jpg" alt="個人照片">
 
 <h1>曾詩淇</h1>
+<p>前端工程師志向</p>
 
-<p>亞洲大學｜資訊工程相關領域學生</p>
+<h3>聯絡資訊</h3>
+<p>Email: your.email@example.com</p>
+<p>Phone: 0912-345-678</p>
+<p>台中市</p>
 
-<p>學號：AU114054024</p>
-
-<p>目標：前端工程師 / Web 開發實習</p>
-
+<h3>技能</h3>
+<div>
+<span class="skill">HTML</span>
+<span class="skill">CSS</span>
+<span class="skill">JavaScript</span>
+<span class="skill">Git</span>
 </div>
 
-</div>
-
-<!-- 個人資訊 -->
-
-<div class="section">
-
-<h2>個人資訊</h2>
-
-<p>Email：your.email@example.com</p>
-
-<p>電話：0912-345-678</p>
-
-<p>地址：台中市，台灣</p>
-
-<p>
-GitHub：
-<a href="#">github.com/yourprofile</a>
-</p>
-
-</div>
-
-<!-- 教育背景 -->
-
-<div class="section">
-
-<h2>教育背景</h2>
-
-<p>
-<strong>亞洲大學</strong> — 資訊相關科系<br>
-2024 - 現在
-</p>
-
-<p>GPA：3.8 / 4.0</p>
-
-<p>相關課程：</p>
-
+<h3>語言</h3>
 <ul>
-<li>資料結構</li>
-<li>演算法</li>
-<li>網頁設計</li>
-<li>軟體工程</li>
+<li>中文（母語）</li>
+<li>英文（中級）</li>
 </ul>
 
 </div>
 
-<!-- 專案經驗 -->
+<!-- 右欄 -->
+<div class="main">
 
 <div class="section">
+<h2>個人簡介</h2>
+<p>具備前端開發基礎，熟悉 HTML / CSS / JavaScript，正在累積專案經驗，目標成為專業 Web 開發工程師。</p>
+</div>
 
+<div class="section">
+<h2>教育背景</h2>
+<p><strong>亞洲大學</strong>｜資訊相關科系（2024 - 現在）</p>
+<p>GPA：3.8 / 4.0</p>
+</div>
+
+<div class="section">
 <h2>專案經驗</h2>
 
 <div class="project">
-
 <strong>任務清單 Web App</strong>
-
 <ul>
-<li>使用 HTML / CSS / JavaScript 製作</li>
-<li>支援新增、刪除、修改任務</li>
-<li>使用 localStorage 儲存資料</li>
+<li>使用 JavaScript 製作 CRUD 功能</li>
+<li>localStorage 儲存資料</li>
 </ul>
-
 </div>
 
 <div class="project">
-
 <strong>個人履歷網站</strong>
-
 <ul>
-<li>使用 HTML + CSS 製作響應式履歷頁面</li>
-<li>設計現代化 UI 版面</li>
+<li>響應式設計</li>
+<li>現代 UI 設計</li>
 </ul>
-
 </div>
 
 </div>
-
-<!-- 技能 -->
-
-<div class="section">
-
-<h2>技能</h2>
-
-<div class="skills">
-
-<div class="skill">HTML</div>
-<div class="skill">CSS</div>
-<div class="skill">JavaScript</div>
-<div class="skill">Git</div>
-<div class="skill">Web Design</div>
-
-</div>
-
-</div>
-
-<!-- 語言 -->
-
-<div class="section">
-
-<h2>語言能力</h2>
-
-<ul>
-
-<li>中文（母語）</li>
-
-<li>英文（中級）</li>
-
-</ul>
-
-</div>
-
-<div class="footer">
-
-© 2026 曾詩淇 Resume
 
 </div>
 
