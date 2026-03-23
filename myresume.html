@@ -103,6 +103,11 @@ body{
 
 <body>
 
+<!-- 🎵 背景音樂 -->
+<audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
 <div class="container">
 
 <!-- 左欄 -->
@@ -114,7 +119,8 @@ body{
 <p>前端工程師志向</p>
 
 <h3>聯絡資訊</h3>
-<p>Email: your.email@example.com</p>
+<p>學號: 114054024</p>
+<p>Email: shih950911@gmail.com</p>
 <p>Phone: 0912-345-678</p>
 <p>台中市</p>
 
@@ -172,6 +178,26 @@ body{
 </div>
 
 </div>
+<audio id="bgm" autoplay loop playsinline>
+  <source src="music/music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const audio = document.getElementById("bgm");
+
+  // 嘗試直接播放
+  audio.play().catch(() => {
+    // 若被擋，快速解除靜音再播放
+    audio.muted = true;
+    audio.play();
+
+    setTimeout(() => {
+      audio.muted = false;
+    }, 100);
+  });
+</script>
+
+
 
 </body>
 </html>
