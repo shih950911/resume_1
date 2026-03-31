@@ -59,7 +59,7 @@ body{
     padding-left:18px;
 }
 
-/* 技能標籤 */
+/* 標籤 */
 .skill{
     display:inline-block;
     background:rgba(255,255,255,0.2);
@@ -116,20 +116,18 @@ body{
 <img src="img/photo.jpg" alt="個人照片">
 
 <h1>曾詩淇</h1>
-<p>前端工程師志向</p>
+<p>服裝設計志向</p>
 
 <h3>聯絡資訊</h3>
 <p>學號: 114054024</p>
-<p>Email: shih950911@gmail.com</p>
-<p>Phone: 0912-345-678</p>
 <p>台中市</p>
 
-<h3>技能</h3>
+<h3>興趣項目</h3>
 <div>
-<span class="skill">HTML</span>
-<span class="skill">CSS</span>
-<span class="skill">JavaScript</span>
-<span class="skill">Git</span>
+<span class="skill">妝造服務</span>
+<span class="skill">假髮造型</span>
+<span class="skill">Cos服修改</span>
+<span class="skill">道具製作</span>
 </div>
 
 <h3>語言</h3>
@@ -145,31 +143,48 @@ body{
 
 <div class="section">
 <h2>個人簡介</h2>
-<p>具備前端開發基礎，熟悉 HTML / CSS / JavaScript，正在累積專案經驗，目標成為專業 Web 開發工程師。</p>
+<p>
+具有領導、行動力、果斷力、適應力四力兼備。
+自己是個具有領導能力，能在團體間領導合作並掌握相關期程。
+處理事情能夠動作迅速敏捷，積極主動，容易付出行動。
+對於事情專注投入，竭盡全力，有始有終，堅持到底。
+自己更是一位思考行為彈性活潑，喜歡變化、改變、創新，
+充滿想像力與新點子。
+</p>
 </div>
 
 <div class="section">
 <h2>教育背景</h2>
-<p><strong>亞洲大學</strong>｜資訊相關科系（2024 - 現在）</p>
-<p>GPA：3.8 / 4.0</p>
+<p><strong>亞洲大學 / 服裝設計系</strong></p>
 </div>
 
 <div class="section">
-<h2>專案經驗</h2>
-
-<div class="project">
-<strong>任務清單 Web App</strong>
+<h2>活動經驗</h2>
 <ul>
-<li>使用 JavaScript 製作 CRUD 功能</li>
-<li>localStorage 儲存資料</li>
+<li>cwt x Accf</li>
+<li>Petit fancy 42</li>
+<li>acosta@台北</li>
+<li>雲緣起</li>
+<li>漫畫博覽會</li>
+<li>Cwt70</li>
+<li>fancy frontier 45</li>
+<li>Cwtt34</li>
+<li>Petit fancy 43</li>
+<li>Ccf</li>
+<li>台中幻日祭</li>
+<li>Cwt71</li>
+<li>fancy frontier 46</li>
+<li>GJ34</li>
 </ul>
 </div>
 
-<div class="project">
-<strong>個人履歷網站</strong>
+<div class="section">
+<h2>活動企劃</h2>
 <ul>
-<li>響應式設計</li>
-<li>現代 UI 設計</li>
+<li>群星祭第一屆（團員）</li>
+<li>BanG Dream！外景拍攝（團員）</li>
+<li>原神—須彌野餐（企劃負責人）</li>
+<li>崩壞星穹鐵道—黃金裔外景拍攝（企劃負責人）</li>
 </ul>
 </div>
 
@@ -177,20 +192,14 @@ body{
 
 </div>
 
-</div>
 <audio id="bgm" autoplay loop playsinline>
   <source src="music/music.mp3" type="audio/mpeg">
 </audio>
 
-<!-- 音樂來源 suno.ai -->
-
-
 <script>
   const audio = document.getElementById("bgm");
 
-  // 嘗試直接播放
   audio.play().catch(() => {
-    // 若被擋，快速解除靜音再播放
     audio.muted = true;
     audio.play();
 
@@ -199,8 +208,6 @@ body{
     }, 100);
   });
 </script>
-
-
 
 </body>
 </html>
